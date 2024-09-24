@@ -14,29 +14,20 @@
         </h1>
     </header>
 
+    {% for post in posts %}
     <article>
-        <time>published: 23.09.2024</time>
+        <time>published: {{ post.published_date }}</time>
         <h2>
             <a  href="">
-                My first post
+                {{ post.title }}
             </a>
         </h2>
         <p>
-            Lorem ipsum, dolor sit amet consectetur a
+            {{ post.text|linebreaksbr}}
         </p>
     </article>
+    {% endfor %}
 
-    <article>
-        <time>published: 23.09.2024</time>
-        <h2>
-            <a href="">
-                My second post
-            </a>
-        </h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        </p>
-    </article>
     
 </body>
 </html>
